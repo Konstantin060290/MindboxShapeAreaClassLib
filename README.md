@@ -1,2 +1,0 @@
-# MindboxShapeAreaClassLib
-Тест
