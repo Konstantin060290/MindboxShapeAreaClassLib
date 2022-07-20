@@ -7,6 +7,7 @@ namespace ShTests
     [TestClass]
     public class UnitTests
     {
+
         //Проверка треугольника на прямоугольность
         [TestMethod]
         public void IsTriangleRectangular()
