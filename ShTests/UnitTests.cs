@@ -8,7 +8,7 @@ namespace ShTests
     public class UnitTests
     {
 
-        //Проверка треугольника на прямоугольность
+        //Check triangle - is rectangular?
         [TestMethod]
         public void IsTriangleRectangular()
         {
@@ -19,7 +19,7 @@ namespace ShTests
             // assert            
             Assert.AreEqual(expected, result);
         }
-        //Проверка вычисления площади треугольника
+        //Check calculation of triangle area
         [TestMethod]
         public void CheckTriangleArea()
         {
@@ -31,7 +31,7 @@ namespace ShTests
             // assert            
             Assert.AreEqual(expected, result);
         }
-        //Проверка вычисления площади окружности
+        //Check calculation of circle area
         [TestMethod]
         public void CheckCircleArea()
         {
@@ -43,7 +43,15 @@ namespace ShTests
             // assert            
             Assert.AreEqual(expected, result);
         }
-        //Проверка создания окружности с отрицательным и нулевым радиусом
+        //Check creation of triangle with negative or zero length sides
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void TriangleWrongSidesTest()
+        {
+            Triangle tr = new Triangle(-1, 5, 6);
+        }
+
+        //Check creation circle with negative or zero radius
         [TestMethod]
         [ExpectedException(typeof(ArgumentException))]
         public void CircleWrongRadiusTest()

@@ -29,7 +29,11 @@
             this.side_a = a;
             this.side_b = b;
             this.side_c = c;
-            this.halfperimeter = (this.side_a + this.side_b + this.side_c)/2;
+            this.halfperimeter = (this.side_a + this.side_b + this.side_c) / 2;
+            if (side_a<=0 | side_b <= 0 | side_c <= 0)
+            {
+                throw new ArgumentException("Length of any side of triangle must be more than 0");
+            }
         }
         public bool IsRectangular()
         {
